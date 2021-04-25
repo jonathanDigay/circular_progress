@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.main{
+    height:100vh;
+    width:100%;
+
+    display:grid;
+    place-items: center;
+
+   .box{
+       height:350px;
+       width:350px;
+       background-color: rgb(238, 145, 226);
+       position: relative;
+
+       svg{
+           width:120px;
+           height:120px;
+           position:relative;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%) rotate(-90deg);;
+   
+        circle{
+            fill:transparent;
+            stroke: purple;
+            stroke-width: 10px;
+            stroke-linecap: round;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: progress 14s infinite;
+        }
+        @keyframes progress {
+            100%{
+                stroke-dashoffset: 0;
+            }
+
+        }
+
+       }
+       .stop{
+           width:110px;
+           height:110px;
+           background-color: transparent;
+           border-radius: 50%;
+           border: 10px solid purple;
+           position: absolute;
+           top:50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           display: none;
+       }
+       .counter{
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+       }
+       .progress{
+           position: absolute;
+           left:50%;
+           bottom:50px;
+           transform: translate(-50%,0);
+           font-size: 25px;
+
+       }
+   }
+    
+}
